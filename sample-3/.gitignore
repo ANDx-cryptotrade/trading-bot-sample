@@ -1,0 +1,10 @@
+# never commit secrets or runtime state
+.env
+*.env
+!.env.example
+scalp_volume_state_*.json
+scalp.log
+logs/
+*.log
+__pycache__/
+
