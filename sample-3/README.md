@@ -1,4 +1,4 @@
-# sample-3 :  Sample competition volume based bot
+# sample-3 :  Sample volume based bot
 
 A simple single-file bot for **ANDX**. It buys and sells a few coins every ~15 minutes to generate trading volume. 
 
