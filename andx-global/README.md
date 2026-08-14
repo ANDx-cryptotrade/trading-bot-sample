@@ -9,20 +9,21 @@ copy it, and build from there.
 |---|---|
 | `sample-1` | Order-placement check: log in, place one market order, and confirm the fill — verifies your API key works end to end. One file. Start here. |
 | `sample-2` | A strategy bot: trend entries ranked by ADX with take-profit, ATR stop and loss limits, remembers its positions between runs, and can be scheduled. |
+| `sample-3` | The same as sample-1, for derivatives: places one margin order, long or short, and reports the position. |
 
 ## Getting started
 
 Each folder has its own `README.md`, `requirements.txt` and `.env.example`. In short:
 
-    cd sample-1                 # or sample-2
+    cd sample-1                 # or sample-2, sample-3
     pip install -r requirements.txt
     cp .env.example .env        # then fill in your ANDX credentials
     python main.py
 
 API keys are created from the exchange dashboard under Settings → API Keys.
 
-`sample-1` places a real order on every run, so test with small amounts. `sample-2` runs in paper mode by
-default (`DRY_RUN=1`) and places nothing until you set `DRY_RUN=0`.
+`sample-1` and `sample-3` place a real order on every run, so test with small amounts. `sample-2` runs in
+paper mode by default (`DRY_RUN=1`) and places nothing until you set `DRY_RUN=0`.
 
 ## Scheduling
 
