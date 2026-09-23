@@ -1,19 +1,26 @@
-# trading-bot-samples
+## ⭐ Start here: competition-bot
 
-Sample trading bots for the ANDX Global exchange. Each sample is self-contained in its own folder — pick one,
-copy it, and build from there.
+The main bot for the ANDX trading competition. Use this one if you are entering. It runs a local dashboard
+where you paste your API key, pick a strategy and set risk limits. No coding is needed.
 
-## Samples
+→ [competition-bot/](competition-bot/): install and run steps are in its README.
+
+## Other samples
+
+Smaller single-purpose examples for developers.
 
 | Folder | What it does |
 |---|---|
-| `sample-1` | Order-placement check: log in, place one market order, and confirm the fill — verifies your API key works end to end. One file. Start here. |
+| `sample-1` | Order-placement check: log in, place one market order, and confirm the fill. Verifies your API key works end to end. One file. |
 | `sample-2` | A strategy bot: trend entries ranked by ADX with take-profit, ATR stop and loss limits, remembers its positions between runs, and can be scheduled. |
 | `sample-3` | The same as sample-1, for derivatives: places one margin order, long or short, and reports the position. |
 
 ## Getting started
 
-Each folder has its own `README.md`, `requirements.txt` and `.env.example`. In short:
+**competition-bot:** follow [competition-bot/README.md](competition-bot/README.md). Run the installer
+(`install.sh` on Mac/Linux, `install.ps1` on Windows), then launch `Start Bot`, and enter your keys on the dashboard.
+
+**sample-1 / 2 / 3:** each folder has its own `README.md`, `requirements.txt` and `.env.example`:
 
     cd sample-1                 # or sample-2, sample-3
     pip install -r requirements.txt
@@ -25,16 +32,3 @@ API keys are created from the exchange dashboard under Settings → API Keys.
 `sample-1` and `sample-3` place a real order on every run, so test with small amounts. `sample-2` runs in
 paper mode by default (`DRY_RUN=1`) and places nothing until you set `DRY_RUN=0`.
 
-## Scheduling
-
-The samples perform one cycle per run; a scheduler repeats them. On Linux and macOS use cron, on Windows use
-Task Scheduler — see `sample-2/README.md` for both.
-
-## More endpoints
-
-These samples use only part of the ANDX API. For the full reference, see https://docs.andxus.io
-
-## Disclaimer
-
-These samples are provided as an educational reference. Automated trading carries risk of financial loss.
-Test with small amounts before deploying against live funds, and use at your own risk.
