@@ -1,0 +1,4 @@
+ccxt>=4.0
+flask>=3.0
+pandas>=2.2
+numpy>=1.26
